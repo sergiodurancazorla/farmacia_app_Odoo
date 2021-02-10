@@ -11,6 +11,7 @@ class Producto(models.Model):
                        readonly=False,
                        required=True,
                        translate=False, )
+
     codigo_nacional = fields.Integer
     descripcion = fields.Text
     inventario = fields.Integer
