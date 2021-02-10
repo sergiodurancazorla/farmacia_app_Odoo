@@ -9,6 +9,7 @@
         'views/farmacia_menu.xml',
         'views/producto_view.xml',
 
+
     ],
 
 }
