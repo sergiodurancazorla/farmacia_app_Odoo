@@ -1,0 +1,17 @@
+<odoo>
+    <!-- MENU DE LA APP DE FARMACIA -->
+    <menuitem id="farmacia_menu" name="farmacia"/>
+
+    <!-- Accion para abrir el menu de productos -->
+    <act_window id="action_farmacia_producto"
+                name="Productos"
+                res_model="farmacia.producto"
+                view_mode="tree,form"/>
+
+    <!-- Menu item to open the Book list -->
+    <menuitem id="menu_farmacia_producto"
+              name="Producto"
+              action="action_farmacia_producto"
+              parent="farmacia_menu"/>
+
+</odoo>
