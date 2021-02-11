@@ -8,7 +8,7 @@
         'security/ir.model.access.csv',
         'views/farmacia_menu.xml',
         'views/producto_view.xml',
-
+        'views/stock_view.xml',
 
     ],
 

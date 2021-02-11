@@ -15,10 +15,10 @@ class Producto(models.Model):
 
     codigo_nacional = fields.Integer()
     descripcion = fields.Text()
-    inventario = fields.Integer()
     imagen = fields.Image()
 
     # atributos relacionados, rellenar más adelante
+    inventario = fields.Integer()
     proveedor = fields.Text()
     coste_proveedor = fields.Integer()
     coste_venta = fields.Integer()

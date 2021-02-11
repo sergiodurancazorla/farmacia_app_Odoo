@@ -2,16 +2,26 @@
     <!-- MENU DE LA APP DE FARMACIA -->
     <menuitem id="farmacia_menu" name="Farmacia"/>
 
-    <!-- Accion para abrir el menu de productos -->
+    <!-- PRODUCTO -->
     <act_window id="action_farmacia_producto"
                 name="Productos"
                 res_model="farmacia.producto"
                 view_mode="tree,form"/>
 
-    <!-- Menu item to open the Book list -->
     <menuitem id="menu_farmacia_producto"
               name="Producto"
               action="action_farmacia_producto"
+              parent="farmacia_menu"/>
+
+    <!-- STOCK -->
+    <act_window id="action_farmacia_stock"
+                name="Stock"
+                res_model="farmacia.stock"
+                view_mode="tree"/>
+
+    <menuitem id="menu_farmacia_stock"
+              name="Stock"
+              action="action_farmacia_stock"
               parent="farmacia_menu"/>
 
 </odoo>
