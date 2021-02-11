@@ -11,7 +11,7 @@
                 </header>
                 <sheet>
                     <group name="group_top">
-                        <field name="codigo_nacional"/>
+                        <field name="producto_codigo_nacional"/>
                     </group>
                     <group name="group_bottom">
                         <field name="inventario"/>
@@ -29,8 +29,8 @@
         <field name="name">Lista de stock</field>
         <field name="model">farmacia.stock</field>
         <field name="arch" type="xml">
-            <tree>
-                <field name="codigo_nacional"/>
+            <tree default_order="producto_codigo_nacional">
+                <field name="producto_codigo_nacional"/>
                 <field name="inventario"/>
                 <field name="proveedor"/>
                 <field name="coste_proveedor"/>

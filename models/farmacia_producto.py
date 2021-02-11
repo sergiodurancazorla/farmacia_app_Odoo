@@ -1,4 +1,6 @@
-from odoo import fields, models
+from odoo import fields, models, api
+
+from . import farmacia_stock
 
 
 class Producto(models.Model):
@@ -17,8 +19,4 @@ class Producto(models.Model):
     descripcion = fields.Text()
     imagen = fields.Image()
 
-    # atributos relacionados, rellenar más adelante
-    inventario = fields.Integer()
-    proveedor = fields.Text()
-    coste_proveedor = fields.Integer()
-    coste_venta = fields.Integer()
+
