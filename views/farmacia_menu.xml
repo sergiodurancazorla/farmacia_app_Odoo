@@ -1,6 +1,6 @@
 <odoo>
     <!-- MENU DE LA APP DE FARMACIA -->
-    <menuitem id="farmacia_menu" name="farmacia"/>
+    <menuitem id="farmacia_menu" name="Farmacia"/>
 
     <!-- Accion para abrir el menu de productos -->
     <act_window id="action_farmacia_producto"
