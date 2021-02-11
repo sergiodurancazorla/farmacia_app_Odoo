@@ -2,29 +2,21 @@
 <odoo>
     <!--Vista de formulario-->
     <record id="view_form_producto" model="ir.ui.view">
-        <field name="name">Form Producto</field>
-        <field name="model">farmacia.producto</field>
+        <field name="name">Form Stock</field>
+        <field name="model">farmacia.stock</field>
         <field name="arch" type="xml">
-            <form string="Producto">
+            <form string="Stock">
                 <header>
                     <!-- Buttons will go here -->
                 </header>
                 <sheet>
                     <group name="group_top">
-                        <group name="group_left">
-                            <field name="name"/>
-                            <field name="codigo_nacional"/>
-                            <field name="descripcion"/>
-                        </group>
-                        <group name="group_left">
-                            <field name="imagen" widget="image"/>
-                        </group>
+                        <field name="codigo_nacional"/>
                     </group>
                     <group name="group_bottom">
                         <field name="inventario"/>
                         <field name="proveedor" widget="many2many_tags"/>
-                        <field name="coste_proveedor" widget="many2many_tags"/>
-                        <field name="coste_venta" widget="many2many_tags"/>
+                        <field name="coste_proveedor" />
                     </group>
                 </sheet>
             </form>
@@ -33,15 +25,14 @@
 
 
     <!--Vista de Lista-->
-    <record id="view_tree_producto" model="ir.ui.view">
-        <field name="name">Lista de productos</field>
-        <field name="model">farmacia.producto</field>
+    <record id="view_tree_stock" model="ir.ui.view">
+        <field name="name">Lista de stock</field>
+        <field name="model">farmacia.stock</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="codigo_nacional"/>
-                <field name="name"/>
                 <field name="inventario"/>
-                <field name="proveedor" widget="many2many_tags"/>
+                <field name="proveedor"/>
                 <field name="coste_proveedor"/>
             </tree>
         </field>

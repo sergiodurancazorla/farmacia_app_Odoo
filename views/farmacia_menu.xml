@@ -17,7 +17,7 @@
     <act_window id="action_farmacia_stock"
                 name="Stock"
                 res_model="farmacia.stock"
-                view_mode="tree"/>
+                view_mode="tree,form"/>
 
     <menuitem id="menu_farmacia_stock"
               name="Stock"
