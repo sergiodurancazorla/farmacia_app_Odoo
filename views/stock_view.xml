@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <odoo>
     <!--Vista de formulario-->
-    <record id="view_form_producto" model="ir.ui.view">
+    <record id="view_form_stock" model="ir.ui.view">
         <field name="name">Form Stock</field>
         <field name="model">farmacia.stock</field>
         <field name="arch" type="xml">

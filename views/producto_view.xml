@@ -1,6 +1,24 @@
 <?xml version="1.0"?>
 <odoo>
+    <!--Vista de Lista-->
+    <record id="view_tree_producto" model="ir.ui.view">
+        <field name="name">Lista de productos</field>
+        <field name="model">farmacia.producto</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="codigo_nacional"/>
+                <field name="proveedor"/>
+                <field name="inventario"/>
+                <field name="coste_proveedor"/>
+                <field name="coste_venta"/>
+            </tree>
+        </field>
+    </record>
+
+
     <!--Vista de formulario-->
+
     <record id="view_form_producto" model="ir.ui.view">
         <field name="name">Form Producto</field>
         <field name="model">farmacia.producto</field>
@@ -23,30 +41,14 @@
                     <group name="group_bottom">
                         <field name="inventario"/>
                         <field name="proveedor" widget="many2many_tags"/>
-                        <field name="coste_proveedor" widget="many2many_tags"/>
-                        <field name="coste_venta" widget="many2many_tags"/>
+                        <field name="coste_proveedor"/>
+                        <field name="coste_venta"/>
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
 
-    <!--Vista de Lista-->
-    <record id="view_tree_producto" model="ir.ui.view">
-        <field name="name">Lista de productos</field>
-        <field name="model">farmacia.producto</field>
-        <field name="arch" type="xml">
-            <tree>
-                <field name="name"/>
-                <field name="codigo_nacional"/>
-                <field name="name"/>
-                <field name="proveedor" widget="many2many_tags"/>
-                <field name="inventario"/>
-                <field name="coste_proveedor" widget="many2many_tags"/>
-                <field name="coste_venta" widget="many2many_tags"/>
-            </tree>
-        </field>
-    </record>
 
 
 
