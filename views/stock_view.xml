@@ -8,12 +8,7 @@
             <form string="Stock">
                 <header>
                     <!-- Buttons will go here -->
-                    <button name="bloquearProducto" string="Desbloquear producto" type="object"
-                            attrs="{'invisible': [('bloquear', '==', 'True')]}"/>
-
-                    <button name="bloquearProducto" string="Bloquear producto" type="object"
-                            attrs="{'invisible': [('bloquear', '==', 'False')]}"/>
-
+                    <button name="bloquearProducto" string="Bloquear / Desbloquear producto" type="object" />
 
                 </header>
                 <sheet>
@@ -40,10 +35,12 @@
         <field name="model">farmacia.stock</field>
         <field name="arch" type="xml">
             <tree default_order="producto_codigo_nacional">
-                <field name="producto_codigo_nacional"/>
+                <field name="producto_codigo_nacional" />
                 <field name="inventario"/>
                 <field name="proveedor"/>
                 <field name="coste_proveedor"/>
+                <field name="bloquear"/>
+
             </tree>
         </field>
     </record>

@@ -1,17 +1,18 @@
 from odoo import fields, models, api
+from odoo.exceptions import *
 
 
 class Stock(models.Model):
     _name = 'farmacia.stock'
     _description = 'Stock'
-
-    inventario = fields.Integer()
+    inventario = fields.Integer(required=True)
 
     # Referencia a producto
     producto_codigo_nacional = fields.Many2one(
         'farmacia.producto',
         string='Producto',
-        ondelete='restrict')
+        ondelete='restrict',
+    )
 
     # Bloquear stock no se pueden hacer ventas de este producto
     bloquear = fields.Boolean('Bloqueado', readonly=True)
@@ -25,13 +26,20 @@ class Stock(models.Model):
 
     def bloquearProducto(self):
         """Bloquea un producto y no se pueden hacer pedidos"""
-        action = {}
         if self.bloquear:
             self.bloquear = False
-            action = {
-                'name': 'Desbloquear producto',
-            }
+
         else:
             self.bloquear = True
 
-        return action
+    # metodo que verifica que el inventario sea mayor a 0
+    @api.constrains('inventario')
+    def comprobarInventario(self):
+        if self.inventario < 0:
+            raise ValidationError('El stock del producto debe ser mayor o igual 0 ')
+
+    # metodo que verifica si se ha puesto un producto
+    @api.constrains('producto_codigo_nacional')
+    def comprobarProducto(self):
+        if not self.producto_codigo_nacional:
+            raise ValidationError('Debe de añadir un producto')
