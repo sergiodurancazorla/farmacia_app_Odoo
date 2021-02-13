@@ -8,15 +8,25 @@
             <form string="Stock">
                 <header>
                     <!-- Buttons will go here -->
+                    <button name="bloquearProducto" string="Desbloquear producto" type="object"
+                            attrs="{'invisible': [('bloquear', '==', 'True')]}"/>
+
+                    <button name="bloquearProducto" string="Bloquear producto" type="object"
+                            attrs="{'invisible': [('bloquear', '==', 'False')]}"/>
+
+
                 </header>
                 <sheet>
                     <group name="group_top">
+                    <group name="group_left">
                         <field name="producto_codigo_nacional"/>
-                    </group>
-                    <group name="group_bottom">
                         <field name="inventario"/>
+                    </group>
+                    <group name="group_right">
                         <field name="proveedor" widget="many2many_tags"/>
                         <field name="coste_proveedor" />
+                        <field name="bloquear" widget="checkbox" on_change="bloqueoProducto()"/>
+                    </group>
                     </group>
                 </sheet>
             </form>

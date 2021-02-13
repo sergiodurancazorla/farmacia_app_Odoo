@@ -1,4 +1,4 @@
-from odoo import fields, models
+from odoo import fields, models, api
 
 
 class Stock(models.Model):
@@ -13,6 +13,9 @@ class Stock(models.Model):
         string='Producto',
         ondelete='restrict')
 
+    # Bloquear stock no se pueden hacer ventas de este producto
+    bloquear = fields.Boolean('Bloqueado', readonly=True)
+
     # Campo relacionados
     proveedor = fields.Text()
 
@@ -20,3 +23,15 @@ class Stock(models.Model):
     coste_proveedor = fields.Integer()
     coste_venta = fields.Integer()
 
+    def bloquearProducto(self):
+        """Bloquea un producto y no se pueden hacer pedidos"""
+        action = {}
+        if self.bloquear:
+            self.bloquear = False
+            action = {
+                'name': 'Desbloquear producto',
+            }
+        else:
+            self.bloquear = True
+
+        return action
