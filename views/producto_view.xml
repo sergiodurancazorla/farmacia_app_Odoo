@@ -7,8 +7,11 @@
         <field name="model">farmacia.producto</field>
         <field name="arch" type="xml">
             <tree>
+
                 <field name="name"/>
                 <field name="codigo_nacional"/>
+                <field name="imagen" widget="image" height="80"/>
+
             </tree>
         </field>
     </record>
@@ -30,7 +33,7 @@
                             <field name="descripcion"/>
                         </group>
                         <group name="group_left">
-                            <field name="imagen" widget="image"/>
+                            <field name="imagen" widget="image" height="400"/>
                         </group>
                     </group >
                 </sheet>

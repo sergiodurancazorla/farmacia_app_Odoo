@@ -7,7 +7,6 @@ from . import farmacia_stock
 class Producto(models.Model):
     _name = 'farmacia.producto'
     _description = 'Producto'
-
     name = fields.Char('Nombre',
                        default=None,
                        index=True,
