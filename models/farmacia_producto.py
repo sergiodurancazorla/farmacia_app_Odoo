@@ -1,8 +1,6 @@
 from odoo import fields, models, api
 from odoo.exceptions import ValidationError
 
-from . import farmacia_stock
-
 
 class Producto(models.Model):
     _name = 'farmacia.producto'
@@ -14,6 +12,14 @@ class Producto(models.Model):
                        readonly=False,
                        required=True,
                        translate=False, )
+
+    inventario = fields.One2many(
+        'farmacia.stock',  # modelo relacionado
+        'inventario',  # nombre del campo en el modelo relacionado
+        string='Inventario Total', readonly=True, )
+
+    #modificar
+    inventario_total = fields.Many2one()
 
     codigo_nacional = fields.Integer('Codigo nacional',
                                      default=None,
@@ -27,10 +33,12 @@ class Producto(models.Model):
     descripcion = fields.Text()
     imagen = fields.Image()
 
+
     # metodo que verifica que el codigo nacional sea correcto
     @api.constrains('codigo_nacional')
     def checkCodigoNacional(self):
         if not self.codigo_nacional or len(self.codigo_nacional) != 6:
             raise ValidationError('El codigo nacional debe tener 6 numeros')
+
 
 

@@ -24,6 +24,9 @@ class Stock(models.Model):
     coste_proveedor = fields.Integer()
     coste_venta = fields.Integer()
 
+    inventario_total = fields.Integer()
+
+
     def bloquearProducto(self):
         """Bloquea un producto y no se pueden hacer pedidos"""
         if self.bloquear:
@@ -43,3 +46,5 @@ class Stock(models.Model):
     def comprobarProducto(self):
         if not self.producto_codigo_nacional:
             raise ValidationError('Debe de añadir un producto')
+
+
