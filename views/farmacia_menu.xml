@@ -23,5 +23,26 @@
               name="Stock"
               action="action_farmacia_stock"
               parent="farmacia_menu"/>
+    <!--Proveedores -->
+    <act_window id="action_farmacia_proveedores"
+                name="Proveedores"
+                res_model="farmacia.proveedores"
+                view_mode="tree, form"
+                />
+    <menuitem id="menu_farmacia_proveedores"
+              name="Proveedores"
+                action="action_farmacia_proveedores"
+                parent="farmacia_menu"/>
+    <!-- Pedidos compra -->
+    <act_window id="action_farmacia_pedidoscompra"
+                name="PedidosCompra"
+                res_model="farmacia.pedidoscompra"
+                view_mode="form, tree"
 
+    />
+    <menuitem id="menu_farmacia_pedidoscompra"
+              name="PedidosCompra"
+              action="action_farmacia_pedidoscompra"
+              parent="farmacia_menu"
+                />
 </odoo>

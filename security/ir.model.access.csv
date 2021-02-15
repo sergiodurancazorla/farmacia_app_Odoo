@@ -1,3 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_farmacia_producto_temp,TempUser,model_farmacia_producto,base.group_user,1,1,1,1
 access_farmacia_stock_temp,TempUser,model_farmacia_stock,base.group_user,1,1,1,1
+access_farmacia_pedidoscompra_temp,TempUser,model_farmacia_pedidoscompra,base.group_user,1,1,1,1
+access_farmacia_proveedores_tem,TempUser,model_farmacia_proveedores,base.group_user,1,1,1,1

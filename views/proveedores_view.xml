@@ -1,15 +1,14 @@
 <?xml version="1.0"?>
 <odoo>
-
     <record id="view_tree_proveedores" model="ir.ui.view">
         <field name="name">Lista de proveedores</field>
         <field name="model">farmacia.proveedores</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="name"/>
+                <field name="id_proveedores"/>
                 <field name="telefono"/>
                 <field name="email"/>
-                <field name="pedidos"/>
+                <field name="pedidosP"/>
             </tree>
         </field>
     </record>
@@ -24,17 +23,17 @@
                 <sheet>
                     <group name="group_top">
                         <group name="group_left">
-                            <field name="name"/>
+                            <field name="id_proveedores"/>
                             <field name="telefono"/>
                             <field name="email"/>
-
+                            <field name="descripcion"/>
                         </group>
                         <group name="group_right">
-                            <field name="descripcion"/>
+                            <field name="imagen" widget="image" height="400"/>
                         </group>
                     </group>
                     <group name="group_bottom">
-                        <field name="pedidos"/>
+                        <field name="pedidosP" widget="many2one_tags"/>
                     </group>
                 </sheet>
             </form>
