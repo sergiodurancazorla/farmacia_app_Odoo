@@ -35,7 +35,7 @@
                 parent="farmacia_menu"/>
     <!-- Pedidos compra -->
     <act_window id="action_farmacia_pedidoscompra"
-                name="PedidosCompra"
+                name="Pedidos Compra"
                 res_model="farmacia.pedidoscompra"
                 view_mode="form, tree"
 

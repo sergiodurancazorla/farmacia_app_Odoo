@@ -6,6 +6,7 @@ class Stock(models.Model):
     _name = 'farmacia.stock'
     _description = 'Stock'
     inventario = fields.Integer(required=True)
+    _rec_name = 'producto_codigo_nacional'
 
     # Referencia a producto
     producto_codigo_nacional = fields.Many2one(
