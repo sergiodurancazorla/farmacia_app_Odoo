@@ -9,7 +9,8 @@
         'views/farmacia_menu.xml',
         'views/producto_view.xml',
         'views/stock_view.xml',
-
+        'views/proveedores_view.xml',
+        'views/pedidoscompra_view.xml',
     ],
 
 }

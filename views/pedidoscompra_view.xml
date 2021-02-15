@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_form_pedidoscompra" model="ir.ui.view">
+        <field name="name">Form Pedidos Compra</field>
+        <field name="model">farmacia.pedidoscompra</field>
+        <field name="arch" type="xml">
+            <form string="Pedidos compra">
+                <header>
+
+                </header>
+                <sheet>
+                    <group name="group_top">
+                        <group name="group_left">
+
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

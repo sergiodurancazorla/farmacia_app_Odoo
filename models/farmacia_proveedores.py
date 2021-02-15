@@ -6,10 +6,11 @@ class Proveedores(models.Model):
 
     id_proveedores = fields.Char(required=True)
 
-    pedidos =  fields.One2many(
+    pedidosP =  fields.Many2one(
         'farmacia.pedidoscompra',
-        'id_pedidosC',
-        string = 'Pedidos del proveedor', readonly="True",)
+        string='Pedidos',
+        ondelete='restrict',
+    )
 
     descripcion = fields.Text()
     email = fields.Text()

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="view_tree_proveedores" model="ir.ui.view">
+        <field name="name">Lista de proveedores</field>
+        <field name="model">farmacia.proveedores</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="telefono"/>
+                <field name="email"/>
+                <field name="pedidos"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_form_proveedores" model="ir.ui.view">
+        <field name="name">Form Proveedores</field>
+        <field name="model">farmacia.proveedores</field>
+        <field name="arch" type="xml">
+            <form string="Proveedores">
+                <header>
+
+                </header>
+                <sheet>
+                    <group name="group_top">
+                        <group name="group_left">
+                            <field name="name"/>
+                            <field name="telefono"/>
+                            <field name="email"/>
+
+                        </group>
+                        <group name="group_right">
+                            <field name="descripcion"/>
+                        </group>
+                    </group>
+                    <group name="group_bottom">
+                        <field name="pedidos"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
