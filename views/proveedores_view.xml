@@ -5,6 +5,7 @@
         <field name="model">farmacia.proveedores</field>
         <field name="arch" type="xml">
             <tree>
+                <field name="name"/>
                 <field name="id_proveedores"/>
                 <field name="telefono"/>
                 <field name="email"/>

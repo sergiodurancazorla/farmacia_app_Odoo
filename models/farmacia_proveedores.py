@@ -1,13 +1,14 @@
 from odoo import fields, models
 
+
 class Proveedores(models.Model):
     _name = 'farmacia.proveedores'
     _description = 'Proveedores'
 
-    _rec_name = 'id_proveedores'
+    name = fields.Char('Nombre')
     id_proveedores = fields.Char(required=True)
 
-    pedidosP =  fields.Many2one(
+    pedidosP = fields.Many2one(
         'farmacia.pedidoscompra',
         string='Pedidos',
         ondelete='restrict',
@@ -15,4 +16,4 @@ class Proveedores(models.Model):
     imagen = fields.Image()
     descripcion = fields.Text()
     email = fields.Text()
-    telefono = fields.Char()
+    telefono = fields.Text()

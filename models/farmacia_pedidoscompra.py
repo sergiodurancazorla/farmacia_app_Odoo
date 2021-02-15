@@ -1,16 +1,13 @@
 from odoo import fields, models
 
-class pedidoscompra(models.Model):
+
+class Pedidoscompra(models.Model):
     _name = 'farmacia.pedidoscompra'
     _description = 'pedidoscompra'
     _order = 'estado asc'
 
     _rec_name = 'id_pedidosC'
-    id_pedidosC = fields.Char(default=None,
-                     index=True,
-                     readonly=False,
-                     required=True,
-                     translate=False)
+    id_pedidosC = fields.Char(required=True)
     descripcion = fields.Text('descripcion')
     # lista_productos = fields.Text('lista')
     filtro_estado = fields.Char('estado')
@@ -24,6 +21,6 @@ class pedidoscompra(models.Model):
 
     productos_pedido = fields.Many2one(
         'farmacia.producto',
-        string = 'Producto',
-        ondelete= 'restrict',
+        string='Producto',
+        ondelete='restrict',
     )
