@@ -23,6 +23,7 @@
                 <sheet>
                     <group name="group_top">
                         <group name="group_left">
+                            <field name="name"/>
                             <field name="telefono"/>
                             <field name="email"/>
                             <field name="descripcion"/>
