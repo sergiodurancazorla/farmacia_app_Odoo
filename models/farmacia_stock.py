@@ -15,13 +15,14 @@ class Stock(models.Model):
         ondelete='restrict',
     )
 
-
-
     # Bloquear stock no se pueden hacer ventas de este producto
     bloquear = fields.Boolean('Bloqueado', readonly=True)
 
     # Campo relacionados
-    proveedor = fields.Text()
+    proveedor = fields.Many2one(
+        'farmacia.proveedores',
+        string='Proveedores'
+    )
 
     # Costes:
     coste_proveedor = fields.Integer()
