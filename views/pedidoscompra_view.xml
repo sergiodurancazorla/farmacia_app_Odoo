@@ -4,14 +4,13 @@
         <field name="name">Form Pedidos Compra</field>
         <field name="model">farmacia.pedidoscompra</field>
         <field name="arch" type="xml">
-            <form string="Pedidos compra">
+            <form>
                 <header>
 
                 </header>
                 <sheet>
                     <group name="group_top">
                         <group name="group_left">
-                        <field name="id_pedidosC"/>
                             <field name="proveedor_id"/>
                         </group>
                         <group name="group_right">

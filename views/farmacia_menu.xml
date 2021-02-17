@@ -28,7 +28,7 @@
     <act_window id="action_farmacia_proveedores"
                 name="Proveedores"
                 res_model="farmacia.proveedores"
-                view_mode="tree, form"
+                view_mode="tree,form"
                 />
     <menuitem id="menu_farmacia_proveedores"
               name="Proveedores"
@@ -38,7 +38,7 @@
     <act_window id="action_farmacia_pedidoscompra"
                 name="Pedidos Compra"
                 res_model="farmacia.pedidoscompra"
-                view_mode="form, tree"
+                view_mode="tree,form"
 
     />
     <menuitem id="menu_farmacia_pedidoscompra"

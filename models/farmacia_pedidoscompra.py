@@ -7,7 +7,6 @@ class Pedidoscompra(models.Model):
     _order = 'estado asc'
 
     _rec_name = 'id_pedidosC'
-    id_pedidosC = fields.Char(required=True)
     descripcion = fields.Text('descripcion')
     # lista_productos = fields.Text('lista')
     filtro_estado = fields.Char('estado')

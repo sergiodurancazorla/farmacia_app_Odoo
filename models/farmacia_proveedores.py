@@ -6,7 +6,6 @@ class Proveedores(models.Model):
     _description = 'Proveedores'
 
     name = fields.Char('Nombre')
-    id_proveedores = fields.Char(required=True)
 
     pedidosP = fields.Many2one(
         'farmacia.pedidoscompra',
