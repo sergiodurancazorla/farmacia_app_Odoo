@@ -6,13 +6,12 @@ class Pedidoscompra(models.Model):
     _description = 'pedidoscompra'
     _order = 'estado asc'
 
-    _rec_name = 'id_pedidosC'
     descripcion = fields.Text('descripcion')
     # lista_productos = fields.Text('lista')
     filtro_estado = fields.Char('estado')
     coste_pedido = fields.Integer('coste')
 
-    proveedor_id = fields.One2many(
+    proveedor = fields.One2many(
         'farmacia.proveedores',
         'pedidosP',
         string='Pedidos al proveedor', readonly=True,

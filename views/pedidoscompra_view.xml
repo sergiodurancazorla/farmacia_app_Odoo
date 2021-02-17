@@ -11,7 +11,7 @@
                 <sheet>
                     <group name="group_top">
                         <group name="group_left">
-                            <field name="proveedor_id"/>
+                            <field name="proveedor"/>
                         </group>
                         <group name="group_right">
                             <field name="productos_pedido"/>
@@ -28,7 +28,6 @@
         <field name="model">farmacia.pedidoscompra</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="id_pedidosC"/>
                 <field name="descripcion"/>
                 <field name="filtro_estado"/>
                 <field name="coste_pedido"/>
