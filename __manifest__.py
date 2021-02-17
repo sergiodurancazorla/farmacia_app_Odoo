@@ -4,6 +4,7 @@
     'author': 'Sergio Duran, Sara Andres, Sergio Martinez',
     'depends': ['base'],
     'application': True,
+    'post_init_hook': 'add_datos_prueba',
     'data': [
         'security/ir.model.access.csv',
         'views/farmacia_menu.xml',
@@ -12,5 +13,8 @@
         'views/proveedores_view.xml',
         'views/pedidoscompra_view.xml',
     ],
+    'demo':[
+        'data/farmacia.producto.csv',
+    ]
 
 }

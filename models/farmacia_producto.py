@@ -37,7 +37,7 @@ class Producto(models.Model):
     # metodo que verifica que el codigo nacional sea correcto
     @api.constrains('codigo_nacional')
     def checkCodigoNacional(self):
-        if not self.codigo_nacional or len(self.codigo_nacional) != 6:
+        if not self.codigo_nacional or len(str(self.codigo_nacional)) != 6:
             raise ValidationError('El codigo nacional debe tener 6 numeros')
 
     #
