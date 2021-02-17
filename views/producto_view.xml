@@ -11,7 +11,7 @@
                 <field name="name"/>
                 <field name="codigo_nacional"/>
                 <field name="imagen" widget="image" height="80"/>
-                <field name="inventario"/>
+                <field name="inventario"  />
 
             </tree>
         </field>
@@ -41,6 +41,8 @@
 
                     <group name="group_bottom">
                         <field name="inventario" />
+                        <field name="inventario_total"/>
+
                     </group>
                 </sheet>
             </form>

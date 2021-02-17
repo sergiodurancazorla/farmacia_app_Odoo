@@ -5,7 +5,7 @@ from odoo.exceptions import *
 class Stock(models.Model):
     _name = 'farmacia.stock'
     _description = 'Stock'
-    inventario = fields.Integer(required=True)
+    inventario= fields.Integer(required=True)
     _rec_name = 'producto_codigo_nacional'
 
     # Referencia a producto
@@ -14,6 +14,8 @@ class Stock(models.Model):
         string='Producto',
         ondelete='restrict',
     )
+
+
 
     # Bloquear stock no se pueden hacer ventas de este producto
     bloquear = fields.Boolean('Bloqueado', readonly=True)
@@ -26,7 +28,6 @@ class Stock(models.Model):
     coste_venta = fields.Integer()
 
     inventario_total = fields.Integer()
-
 
     def bloquearProducto(self):
         """Bloquea un producto y no se pueden hacer pedidos"""
@@ -47,5 +48,3 @@ class Stock(models.Model):
     def comprobarProducto(self):
         if not self.producto_codigo_nacional:
             raise ValidationError('Debe de añadir un producto')
-
-

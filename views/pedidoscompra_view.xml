@@ -24,7 +24,7 @@
             </form>
         </field>
     </record>
-    <record id="view_tree_stock" model="ir.ui.view">
+    <record id="view_tree_perdidosCompra" model="ir.ui.view">
         <field name="name">Lista de Pedidos</field>
         <field name="model">farmacia.pedidoscompra</field>
         <field name="arch" type="xml">

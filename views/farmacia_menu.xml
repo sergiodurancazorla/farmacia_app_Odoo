@@ -23,6 +23,7 @@
               name="Stock"
               action="action_farmacia_stock"
               parent="farmacia_menu"/>
+
     <!--Proveedores -->
     <act_window id="action_farmacia_proveedores"
                 name="Proveedores"
@@ -41,7 +42,7 @@
 
     />
     <menuitem id="menu_farmacia_pedidoscompra"
-              name="PedidosCompra"
+              name="Pedidos Compra"
               action="action_farmacia_pedidoscompra"
               parent="farmacia_menu"
                 />

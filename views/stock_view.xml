@@ -35,7 +35,7 @@
         <field name="model">farmacia.stock</field>
         <field name="arch" type="xml">
             <tree default_order="producto_codigo_nacional">
-                <field name="producto_codigo_nacional" />
+                <field name="producto_codigo_nacional"/>
                 <field name="inventario"/>
                 <field name="proveedor"/>
                 <field name="coste_proveedor"/>
