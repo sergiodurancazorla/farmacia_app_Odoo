@@ -16,7 +16,7 @@
                         <group name="group_right">
                             <field name="productos_pedido"/>
                             <field name="coste_pedido"/>
-                            <field name="filtro_estado"/>
+                          <!--  <field name="filtro_estado"/> -->
                         </group>
                     </group>
                 </sheet>
@@ -29,7 +29,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="descripcion"/>
-                <field name="filtro_estado"/>
+                <!-- <field name="filtro_estado"/> -->
                 <field name="coste_pedido"/>
             </tree>
         </field>
