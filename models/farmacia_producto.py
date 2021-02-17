@@ -20,7 +20,7 @@ class Producto(models.Model):
         'producto_codigo_nacional',  # nombre del campo en el modelo relacionado
         string='Inventario Total', readonly=True, )
 
-    inventario_total = fields.Integer()
+    inventario_total = fields.Integer(compute='_compute_calcularTotal')
 
     codigo_nacional = fields.Integer('Codigo nacional',
                                      default=None,
@@ -40,7 +40,7 @@ class Producto(models.Model):
         if not self.codigo_nacional or len(self.codigo_nacional) != 6:
             raise ValidationError('El codigo nacional debe tener 6 numeros')
 
-    @api.constrains('inventario', 'inventario_total')
-    def calcularTotal(self):
+    @api.depends('inventario', 'inventario_total')
+    def _compute_calcularTotal(self):
         for record in self.inventario:
             self.inventario_total = self.inventario_total + record.inventario
