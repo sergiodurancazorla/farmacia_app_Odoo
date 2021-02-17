@@ -7,7 +7,7 @@ class Pedidoscompra(models.Model):
 
     descripcion = fields.Text('descripcion')
     # lista_productos = fields.Text('lista')
-    # filtro_estado = fields.Selection([('pendiente', 'Pendiente de pago'), ('pagado', 'Pagado')], 'estado')
+    filtro_estado = fields.Selection([('pendiente', 'Pendiente de pago'), ('pagado', 'Pagado')], 'estado')
     coste_pedido = fields.Integer('coste')
 
     proveedor = fields.One2many(
