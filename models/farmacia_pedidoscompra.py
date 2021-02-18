@@ -19,7 +19,7 @@ class Pedidoscompra(models.Model):
 
     productos_pedido = fields.Many2many(
         'farmacia.producto',
-        string='codigo',
+        string='producto',
         ondelete='restrict',
         required=True,
     )
