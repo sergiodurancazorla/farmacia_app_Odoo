@@ -11,7 +11,7 @@
                 <sheet>
                     <group name="group_top">
                         <group name="group_left">
-                            <field name="productos_pedido"/>
+                            <field name="productos_pedido" />
                         </group>
                         <group name="group_right">
                             <field name="proveedorC"/>

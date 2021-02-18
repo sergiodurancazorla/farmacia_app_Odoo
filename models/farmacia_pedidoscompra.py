@@ -17,10 +17,9 @@ class Pedidoscompra(models.Model):
         string='Pedidos al proveedor', ondelete='restrict',
     )
 
-    productos_pedido = fields.One2many(
+    productos_pedido = fields.Many2many(
         'farmacia.producto',
-        'name',
-        string='Producto',
+        string='codigo',
         ondelete='restrict',
     )
     #deberia verificar si se ha puesto un producto

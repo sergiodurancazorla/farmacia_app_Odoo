@@ -13,7 +13,7 @@
         'views/proveedores_view.xml',
         'views/pedidoscompra_view.xml',
     ],
-    'demo':[
+    'demo': [
         'data/farmacia.producto.csv',
     ]
 
