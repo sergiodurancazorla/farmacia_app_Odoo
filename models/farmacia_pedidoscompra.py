@@ -14,13 +14,14 @@ class Pedidoscompra(models.Model):
     proveedorC = fields.Many2one(
         'farmacia.proveedores',
        # 'pedidosP',
-        string='Pedidos al proveedor', ondelete='restrict',
+        string='Pedidos al proveedor', ondelete='restrict', required=True,
     )
 
     productos_pedido = fields.Many2many(
         'farmacia.producto',
         string='codigo',
         ondelete='restrict',
+        required=True,
     )
     #deberia verificar si se ha puesto un producto
     @api.constrains('productos_pedido')
