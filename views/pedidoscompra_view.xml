@@ -11,10 +11,11 @@
                 <sheet>
                     <group name="group_top">
                         <group name="group_left">
-                            <field name="proveedor"/>
+                            <field name="productos_pedido"/>
                         </group>
                         <group name="group_right">
-                            <field name="productos_pedido"/>
+                            <field name="proveedorC"/>
+                            <field name="descripcion"/>
                             <field name="coste_pedido"/>
                            <field name="filtro_estado"/>
                         </group>

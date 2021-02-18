@@ -7,8 +7,9 @@ class Proveedores(models.Model):
 
     name = fields.Char('Nombre')
 
-    pedidosP = fields.Many2one(
+    pedidosP = fields.One2many(
         'farmacia.pedidoscompra',
+        'proveedorC',
         string='Pedidos',
         ondelete='restrict',
     )

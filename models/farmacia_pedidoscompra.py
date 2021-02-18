@@ -1,4 +1,5 @@
-from odoo import fields, models
+from odoo import fields, models, api
+from odoo.exceptions import *
 
 
 class Pedidoscompra(models.Model):
@@ -10,14 +11,26 @@ class Pedidoscompra(models.Model):
     filtro_estado = fields.Selection([('pendiente', 'Pendiente de pago'), ('pagado', 'Pagado')], 'estado')
     coste_pedido = fields.Integer('coste')
 
-    proveedor = fields.One2many(
+    proveedorC = fields.Many2one(
         'farmacia.proveedores',
-        'pedidosP',
-        string='Pedidos al proveedor', readonly=True,
+       # 'pedidosP',
+        string='Pedidos al proveedor', ondelete='restrict',
     )
 
-    productos_pedido = fields.Many2one(
+    productos_pedido = fields.One2many(
         'farmacia.producto',
+        'name',
         string='Producto',
         ondelete='restrict',
     )
+    #deberia verificar si se ha puesto un producto
+    @api.constrains('productos_pedido')
+    def comprobarProductosPedido(self):
+        if not self.productos_pedido:
+            raise ValidationError('Debe de añadir un producto')
+
+    #deberia verificar si se ha elegido un proveedor
+    @api.constrains('proveedorC')
+    def comprobarProveedor(self):
+        if not self.proveedorC:
+            raise ValidationError('Debe escoger un proveedor')
