@@ -5,6 +5,7 @@
     'depends': ['base'],
     'application': True,
     'post_init_hook': 'add_datos_prueba',
+    'post_init_hook': 'add_datos_proveedores',
     'data': [
         'security/ir.model.access.csv',
         'views/farmacia_menu.xml',
@@ -15,6 +16,7 @@
     ],
     'demo': [
         'data/farmacia.producto.csv',
+        'data/farmacia.proveedores.csv',
     ]
 
 }
