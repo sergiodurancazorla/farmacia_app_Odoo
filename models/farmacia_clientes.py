@@ -18,3 +18,4 @@ class clientes(models.Model):
     telefono = fields.Char()
     email = fields.Text()
     saldo = fields.Char()
+
