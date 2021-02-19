@@ -3,3 +3,5 @@ access_farmacia_producto_temp,TempUser,model_farmacia_producto,base.group_user,1
 access_farmacia_stock_temp,TempUser,model_farmacia_stock,base.group_user,1,1,1,1
 access_farmacia_pedidoscompra_temp,TempUser,model_farmacia_pedidoscompra,base.group_user,1,1,1,1
 access_farmacia_proveedores_tem,TempUser,model_farmacia_proveedores,base.group_user,1,1,1,1
+access_farmacia_clientes_temp,TempUser,model_farmacia_clientes,base.group_user,1,1,1,1
+access_farmacia_pedidosventa_temp,TempUser,model_farmacia_pedidosventa,base.group_user,1,1,1,1
