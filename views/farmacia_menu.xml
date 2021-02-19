@@ -46,4 +46,24 @@
               action="action_farmacia_pedidoscompra"
               parent="farmacia_menu"
                 />
+
+    <!--Clientes -->
+    <act_window id="action_farmacia_clientes"
+                name="Clientes"
+                res_model="farmacia.clientes"
+                view_mode="tree,form"/>
+    <menuitem id="menu_farmacia_clientes"
+              name="Clientes"
+              action="action_farmacia_clientes"
+              parent="farmacia_menu"/>
+
+    <!--Pedidos venta-->
+    <act_window id="action_farmacia_pedidosventa"
+                name="Pedidos Venta"
+                res_model="farmacia.pedidosventa"
+                view_mode="tree,form"/>
+    <menuitem id="menu_farmacia_pedidosventa"
+              name="Pedidos Venta"
+              action="action_farmacia_pedidosventa"
+              parent="farmacia_menu"/>
 </odoo>
