@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_form_pedidosventa" model="ir.ui.view">
+        <field name="name">Form Pedidos venta</field>
+        <field name="model">farmacia.pedidosventa</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+
+                </header>
+                <shett>
+                    <group name="group_top">
+                        <group name="group_left">
+                            <field name="pedidos_cliente" />
+                        </group>
+                        <group name="group_right">
+                            <field name="clienteCL"/>
+                            <field name="descripcion"/>
+                            <field name="estado"/>
+                        </group>
+                    </group>
+                </shett>
+            </form>
+        </field>
+    </record>
+    <record id="view_tree_perdidosventa" model="ir.ui.view">
+        <field name="name">Lista de pedidos</field>
+        <field name="model">farmacia.pedidosventa</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="descripcion"/>
+                <field name="estado"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
