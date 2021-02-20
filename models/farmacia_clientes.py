@@ -1,19 +1,21 @@
 from odoo import fields, models
-from odoo.exceptions import ValidationError
+from odoo.exceptions import *
+
 
 class clientes(models.Model):
     _name = 'farmacia.clientes'
     _description = 'clientes'
 
-    id_clientes = fields.Char(required=True)
+    name = fields.Char('Nombre')
 
-    pedidosV = fields.Many2one(
+    pedidosV = fields.One2many(
         'farmacia.pedidosventa',
-        string = 'Pedidos',
-        ondelete = 'restrict',
+        'clienteCL',
+        string='Pedidos',
+        ondelete='restrict',
     )
-
     informacion = fields.Text()
     telefono = fields.Char()
     email = fields.Text()
     saldo = fields.Char()
+

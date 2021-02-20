@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_tree_clientes" model="ir.ui.view">
+        <field name="name">Lista de clientes</field>
+        <field name="model">farmacia.clientes</field>
+        <field name="arch" type="xml" >
+            <tree>
+                <field name="name"/>
+                <field name="telefono"/>
+                <field name="email"/>
+                <field name="informacion"/>
+                <field name="saldo"/>
+                <field name="pedidosV"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_form_clientes" model="ir.ui.view">
+        <field name="name">Form Clientes</field>
+        <field name="model">farmacia.clientes</field>
+        <field name="arch" type="xml"/>
+        <form>
+            <header>
+
+            </header>
+            <sheet>
+                <group name="group_top">
+                        <group name="group_left">
+                            <field name="name"/>
+                            <field name="telefono"/>
+                            <field name="email"/>
+                            <field name="informacion"/>
+                            <field name="saldo" />
+                        </group>
+                        <group name="group_right">
+                            <field name="imagen" widget="image" height="400"/>
+                        </group>
+                    </group>
+                    <group name="group_bottom">
+                        <field name="pedidosV" widget="many2one_tags"/>
+                    </group>
+            </sheet>
+        </form>
+    </record>
+</odoo>
