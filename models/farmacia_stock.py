@@ -5,7 +5,7 @@ from odoo.exceptions import *
 class Stock(models.Model):
     _name = 'farmacia.stock'
     _description = 'Stock'
-    inventario= fields.Integer(required=True)
+    inventario = fields.Integer(required=True)
     _rec_name = 'producto_codigo_nacional'
 
     # Referencia a producto
@@ -21,7 +21,8 @@ class Stock(models.Model):
     # Campo relacionados
     proveedor = fields.Many2one(
         'farmacia.proveedores',
-        string='Proveedores'
+        string='Proveedores',
+        required=True,
     )
 
     # Costes:
